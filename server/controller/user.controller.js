@@ -9,7 +9,6 @@ async function signup(req, resp) {
         const obj = new userColRef({
             email: req.body.email,
             pass: hashedPassword,
-            // other user properties
         });
         await obj.save();
         resp.send("Signed up successfully");
