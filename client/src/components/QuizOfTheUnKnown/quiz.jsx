@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./quiz.css";
 import questions from "./ques.jsx";
+import pic from './img3.jpg';
 
 function App() {
   const shuffledQuestions = [...questions].sort(() => Math.random() - 0.2).slice(0, 5);
@@ -38,8 +39,9 @@ function App() {
   };
 
   return (
+    <>
+    {/* <img src={pic} alt="not aval" width="100%"/> */}
     <div className="App">
-
       {/* <video src={videobg} className="video-background" autoPlay loop muted playsInline /> */}
 
       <h1 className="heading">QUIZ OF THE UNKNOWN</h1>
@@ -67,6 +69,7 @@ function App() {
         </div>
       )}
     </div>
+    </>
   );
 }
 

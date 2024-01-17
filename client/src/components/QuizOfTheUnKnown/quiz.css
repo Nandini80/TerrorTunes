@@ -1,17 +1,23 @@
 body{
-    background-image: url('./img3.jpg');
+    /* background-image: url('./img3.jpg'); */
     /* background-repeat: no-repeat; */
-   background-size:cover;
-   overflow-y: hidden;
+   /* background-size:cover; */
+   /* overflow-y: hidden; */
 
   } 
   
   .App {
-    overflow-y: hidden;
-    text-align: center;
+    /* overflow-y: hidden; */
+    /* text-align: center; */
     /* height: 100%; */
-    width: 100%;
+    /* width: 100%; */
     /* height: 100vh;  */
+    overflow-y: hidden;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('./img3.jpg'); /* Set background image for the quiz */
+  background-size: cover;
    
   }
   
@@ -29,9 +35,11 @@ body{
   }
   
   .scoreboard {
+    position: absolute;
+    top: 4.1rem;
     width: 100%;
     height: 90%;
-    top: 2vh; /* Adjusted top margin for smaller screens */
+     /* Adjusted top margin for smaller screens */
     display: flex;
     justify-content: center;
     color: white;
