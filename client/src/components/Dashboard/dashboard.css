@@ -1,0 +1,8 @@
+.dashboardbg {
+  height:60vh;
+  width:100vw;
+}
+.dashboardcard{
+    display: flex;
+    justify-content: space-evenly;
+  }

@@ -6,6 +6,7 @@ import gateLeftImage from "./img/gate-left.png";
 import gateRightImage from "./img/gate-right.png";
 import grassImage from "./img/grass.png";
 
+
 function Index() {
   useEffect(() => {
     let ParallaxHeadingText = document.querySelector(".Parallax-heading");
@@ -35,7 +36,7 @@ function Index() {
       <nav>
         <div className="container nav-container">
           <a href="/" className="logo">
-            <h3>Terror Tunes</h3>
+            <h3 className="text-danger">Terror Tunes</h3>
           </a>
           <ul className="nav-links">
             <li>

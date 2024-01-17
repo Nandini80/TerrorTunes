@@ -32,12 +32,12 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-.logo h3{
+/* .logo h3{
     font-size: 2.2rem;
     color: #fff;
     user-select: none;
     font-weight: 600;
-}
+} */
 .nav-links{
     display: flex;
     align-items: center;
