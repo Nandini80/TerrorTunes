@@ -105,7 +105,7 @@ function CardConjure() {
   };
 
   return (
-    <div>
+    <div className="main">
       <div className="heading">
         <h1>The Cards Conjure</h1>
       </div>

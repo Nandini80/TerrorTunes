@@ -18,7 +18,7 @@ import CollabPerson from './components/CollaborationPerson.jsx';
 import CollabBand from './components/CollaborationBand.jsx';
 import LandingPage from './components/LandingPage.jsx';
 import CardConjure from './components/TheCardConjure/CardConjure.jsx';
-import index1 from './components/DoomedMelodies/index1.jsx';
+import Doomed from './components/DoomedMelodies/Doomed.jsx';
 
 function App() {
 
@@ -56,7 +56,7 @@ function App() {
           <Route path='/PersonProfile' element={<PersonProf></PersonProf>}></Route>
           <Route path='/collaborationPerson' element={<CollabPerson></CollabPerson>}></Route>
           <Route path='/collaborationBand' element={<CollabBand></CollabBand>}></Route>
-          <Route path='/index1' element={<BandDash></BandDash>}></Route>
+          <Route path='/doomed' element={<Doomed></Doomed>}></Route>
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}
