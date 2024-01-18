@@ -10,24 +10,24 @@ const getUserService=()=>{
     return privateReq.get("/user/CurrentUser");
 };
 
-const DistinctCatService =()=>
+const DistinctCategories =()=>
 {
-    return publicReq.get("/band/distinct-services");
+    return publicReq.get("/band/distinct-cat");
 }; 
 
-const fetchProviders=(data)=>{
-    return privateReq.post("/provider/fetchprovider",data);
+const fetchBands=(data)=>{
+    return privateReq.post("/band/fetchBands",data);
 };
 
-const DistinctCityClient =()=>
+const DistinctStyle =()=>
 {
-    return publicReq.get("/client/distinct-city");
+    return publicReq.get("/person/distinct-style");
 }; 
 
-const fetchClient=(data)=>{
-    return privateReq.post("/client/fetchClient",data);
+const fetchStyles=(data)=>{
+    return privateReq.post("/person/fetchStyles",data);
 };
 
 export {};
 
-export {getUserService,signupservice,DistinctCatService,fetchProviders,DistinctCityClient,fetchClient};
+export {getUserService,signupservice,DistinctCategories,fetchBands,DistinctStyle,fetchStyles};

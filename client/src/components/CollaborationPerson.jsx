@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import { DistinctCatService,fetchProviders } from '../services/user';
+import { DistinctCategories,fetchBands } from '../services/user';
 import Cards from './Cards';
 
 function FindserviceProvider() 
 {
     var c1="";//city
     var c2="";//music style
-    const [jsonCat,setCategory] = useState([]); 
+    const [jsonCat,setCategory] = useState([]);
     const [jsonCity,setCity] = useState([]); 
     const [jsonAry,setAry] = useState([]);
 
     useEffect(()=>{
         console.log("Use effect called");
         doFetchCat();
-    },[]); //Dependency ar  ray
+    },[]);
 
     const doFetchCat=async()=>{
-        const res = await DistinctCatService();
+        const res = await DistinctCategories();
         setCategory(res.data.user[0]);
         setCity(res.data.user[1]);
        };   
@@ -32,8 +32,8 @@ function FindserviceProvider()
         }
         else 
         {
-          const resp = await fetchProviders({c1,c2});
-          alert(JSON.stringify(resp));
+          const resp = await fetchBands({c1,c2});
+          // alert(JSON.stringify(resp));
           setAry(resp.data);
         }
        }
@@ -50,7 +50,7 @@ function FindserviceProvider()
             <select name="city" required onChange={(e)=>c1= e.target.value}>
               <option value="" disabled selected> Select </option>
               {
-                jsonCity.map((obj)=> <option value={obj}>{obj}</option>)
+                jsonCity.map((obj)=> <option key={obj} value={obj}>{obj}</option>)
               }
             </select>
           </Form.Group>
@@ -60,7 +60,7 @@ function FindserviceProvider()
             <select name="" required onChange={(e)=>c2=e.target.value}>
               <option value="" disabled selected> Select </option>
               {
-                jsonCat.map((obj)=> <option value={obj}>{obj}</option>)
+                jsonCat.map((obj)=> <option key={obj} value={obj}>{obj}</option>)
               }
             </select>
           </Form.Group>
@@ -69,12 +69,12 @@ function FindserviceProvider()
           {
             jsonAry.map((obj)=>{
                 return(
-                    <Cards img={obj.idProof} Name={obj.name} Email={obj.email} Mobile={obj.mobile} City={obj.city} address={obj.address} pro={obj.cat}></Cards>
+                    <Cards key={obj} Name={obj.name} Email={obj.email} Mobile={obj.mobile} MusicStyle={obj.musicstyle} Experience={obj.exp} Members={obj.members} City={obj.city} address={obj.address}></Cards>
                 )
             })
           }
           </Row>
-          <Button md="1" as={Col} className='offset-md-6' variant="primary" onClick={doSearch}>Search</Button>
+          <Button md="1" as={Col} className='offset-md-6 mt-3' variant="primary" onClick={doSearch}>Search</Button>
        </Form>
     </div>
   )

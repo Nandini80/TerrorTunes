@@ -14,7 +14,11 @@ return(
      <br />
         Contact : {objProp.Mobile}
      <br />
-        City : {objProp.City}
+        Experience : {objProp.Experience}
+    <br />
+        MusicStyle : {objProp.MusicStyle}
+     <br />
+     City : {objProp.City}
     <br />
         Address : {objProp.address}
      <br />

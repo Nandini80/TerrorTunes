@@ -10,12 +10,12 @@ import Login from './components/login.jsx';
 import Signup from './components/signup.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 import { getUserService } from './services/user';
-import CDash from './components/PersonDash.jsx';
-import PDash from './components/BandDash.jsx';
+import PersonDash from './components/PersonDash.jsx';
+import BandDash from './components/BandDash.jsx';
 import ProviderProfile from './components/BandInfo.jsx';
 import PersonProf from './components/PersonInfo.jsx';
 import CollabPerson from './components/CollaborationPerson.jsx';
-import FindClient from './components/FindClient.jsx';
+import CollabBand from './components/CollaborationBand.jsx';
 import UpperPart from './components/LandingPage.jsx';
 
 function App() {
@@ -52,12 +52,12 @@ function App() {
           <Route path='/Signup' element={token ?<Navigate to={user.desig === "person" ? "/person":"/band"} /> :<Signup />} />
           <Route path='/login' element={token ?<Navigate to={user.desig === "person" ? "/person":"/band"} /> :<Login />} />
           <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/person' element={<CDash></CDash>}></Route>
-          <Route path='/band' element={<PDash></PDash>}></Route>
+          <Route path='/person' element={<PersonDash></PersonDash>}></Route>
+          <Route path='/band' element={<BandDash></BandDash>}></Route>
           <Route path='/BandProfile' element={<ProviderProfile></ProviderProfile>}></Route>
           <Route path='/PersonProfile' element={<PersonProf></PersonProf>}></Route>
           <Route path='/collaborationPerson' element={<CollabPerson></CollabPerson>}></Route>
-          <Route path='/collaborationBand' element={<FindClient></FindClient>}></Route>
+          <Route path='/collaborationBand' element={<CollabBand></CollabBand>}></Route>
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}

@@ -14,8 +14,7 @@ app.post("/profile",controller.SaveProfile);
 app.post("/doUpdate",controller.updateProfile);
 app.post("/doFetch",controller.fetchProfile);
 
-
-app.get("/distinct-city",controller.distCity);
-app.post("/fetchClient",controller.fetchClient);
+app.get("/distinct-style",controller.distStyle);
+app.post("/fetchStyles",controller.fetchStyles);
 
 module.exports = app;

@@ -36,10 +36,10 @@ async function fetchProfile(req,resp)
   });
 };
 
-async function distCity(req,resp)
+async function distStyle(req,resp)
    {
       try{
-       const user = await PersonColRef.distinct("city");
+       const user = await PersonColRef.distinct("musicstyle");
        resp.json({user,status:true});
        return;
       }
@@ -50,14 +50,14 @@ async function distCity(req,resp)
       }
   };
 
-  async function fetchClient(req,resp)
+  async function fetchStyles(req,resp)
   {
     console.log(req.body);
-    await PersonColRef.find({city : req.body.c1}).then((res)=>{
+    await PersonColRef.find({musicstyle : req.body.c1}).then((res)=>{
       resp.send(res);
     }).catch((e)=>{
       console.log(e);
     })
   };
 
-module.exports ={SaveProfile,updateProfile,fetchProfile,distCity,fetchClient };
+module.exports ={SaveProfile,updateProfile,fetchProfile,distStyle,fetchStyles };

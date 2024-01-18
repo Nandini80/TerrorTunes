@@ -50,14 +50,14 @@ async function distServices(req,resp)
       }
   };
 
-  async function fetchprovider(req,resp)
+  async function fetchBands(req,resp)
   {
     console.log(req.body);
-    await BandColRef.find({city : req.body.c1,cat : req.body.c2}).then((res)=>{
+    await BandColRef.find({city : req.body.c1,musicstyle : req.body.c2}).then((res)=>{
       resp.send(res);
     }).catch((e)=>{
       console.log(e);
     })
   };
 
-module.exports ={SaveProfile,updateProfile,fetchProfile,distServices,fetchprovider};
+module.exports ={SaveProfile,updateProfile,fetchProfile,distServices,fetchBands};
