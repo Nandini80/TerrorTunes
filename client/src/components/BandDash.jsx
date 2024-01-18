@@ -57,7 +57,7 @@ function PDash() {
   
   return (
     <div>
-      <div>
+      <div style={{ backgroundImage: `url('https://wallpaperdj.com/wallpapers/vinyl_life-1152x864.jpg')` }}>
         <center>
           <h1 className="mt-3">
             WELCOME {aemail} <span id="user-email" />
