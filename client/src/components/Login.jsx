@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
-
+import './login.css'
+import Navbar from './LandingPagee/Navbar';
 function Login() 
 {
   const navigate = useNavigate();
@@ -61,24 +62,29 @@ function Login()
   };
 
   return (
-    <div className="signup-container mt-5">
-      <form method="post">
+    <div className='outer'>
+      <Navbar/>
+      <div className='logincon'>
+    {/* <div className="signup-container mt-5 "> */}
+      <form method="post" className='myform'>
         <center>
-          <h2>Login here</h2>
+          <h2 className='heading'> Login here</h2>
           <div className="input-container">
-            <label>Email:</label>
+            <label className='lab'>Email:</label>
             <input type="email" name="email" onChange={doUpdatetxt} onBlur={doCheck} required />
             <p>{errobj.email}</p>
           </div>
           <div className="input-container">
-            <label>Password:</label>
+            <label className='lab'>Password:</label>
             <input type="password" name="pass" onChange={doUpdatetxt} onBlur={doCheck} required />
             <p>{errobj.pass}</p>
             </div>
-          <button value="button" onClick={doSubmit}>Login</button>
+          <button className='loginbtn' value="button" onClick={doSubmit}>Login</button>
         </center>
       </form>
+      </div>
     </div>
+    // </div>
   );
 }
 

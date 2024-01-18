@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./quiz.css";
 import questions from "./ques.jsx";
-import pic from './img3.jpg';
+// import pic from './img3.jpg';
 
 function Quiz() {
   const shuffledQuestions = [...questions].sort(() => Math.random() - 0.2).slice(0, 5);
@@ -36,12 +36,14 @@ function Quiz() {
     setScore(0);
     setCurrentQuestion(0);
     setShowResults(false);
+    const audioElement = document.getElementById("endGameAudio");
+    audioElement.play();
   };
 
   return (
     <>
     {/* <img src={pic} alt="not aval" width="100%"/> */}
-    <div className="App">
+    <div className="outer">
       {/* <video src={videobg} className="video-background" autoPlay loop muted playsInline /> */}
 
       <h1 className="heading">QUIZ OF THE UNKNOWN</h1>
@@ -53,15 +55,17 @@ function Quiz() {
           <h2>
             {score} out of 5 correct - ({(score / 5) * 100}%)
           </h2>
-          <button onClick={restartGame}>Restart game</button>
+          <button className="btn"onClick={restartGame}>Restart game</button>
+          {/* added  */}
+         
         </div>
       ) : (
         <div className="question-card">
           <h2 className="quescnt">Question: {currentQuestion + 1} out of 5</h2>
           <h3 className="question-text">{shuffledQuestions[currentQuestion].text}</h3>
-          <ul>
+          <ul className="unlist">
             {shuffledQuestions[currentQuestion].options.map((option) => (
-              <li key={option.id} onClick={() => optionClicked(option.isCorrect) }>
+              <li  className="litem" key={option.id} onClick={() => optionClicked(option.isCorrect) }>
                 {option.text}
               </li>
             ))}

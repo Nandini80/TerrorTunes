@@ -3,7 +3,8 @@ import axios from 'axios';
 import '../Styling/SignupCSS.css';  
 import { signupservice } from '../services/user';
 import { useNavigate } from 'react-router-dom';
-
+import Navbar from './LandingPagee/Navbar';
+import './signup.css'
 function Signup() {
   const [obj, dosignup] = useState({ email: "", pass: "", desig: "" });
   const [errobj, doUpdateErr] = useState({ email: "", pass: "", desig: "" })
@@ -61,22 +62,25 @@ function Signup() {
      }
 
   return (
-    <div className="signup-container mt-4">
-      <form method="post">
+  <div className="outer">
+    <Navbar/>
+    <div className="signupcon">
+    {/* <div className="signup-container mt-4"> */}
+      <form method="post" name='myform'>
         <center>
-          <h2>Signup here</h2>
+          <h2 className='heading'>Signup here</h2>
           <div className="input-container">
-            <label>Email:</label>
+            <label className='lab'>Email:</label>
             <input type="email" name="email" onChange={doUpdatetxt} onBlur={doCheck} required />
             <p>{errobj.email}</p>
           </div>
           <div className="input-container">
-            <label>Password:</label>
+            <label className='lab'>Password:</label>
             <input type="password" name="pass" onChange={doUpdatetxt} onBlur={doCheck} required />
             <p>{errobj.pass}</p>
           </div>
           <div className="input-container">
-            <label>Designation:</label>
+            <label className='lab'>Category:</label>
             <select name="desig" onChange={doUpdatetxt} onBlur={doCheck} required >
               <option value="" disabled selected> Select </option>
               <option value="band">Band</option>
@@ -84,10 +88,12 @@ function Signup() {
             </select>
             <p>{errobj.desig}</p>
           </div>
-          <button value="Submit" onClick={doSign}>Sign Up</button>
+          <button className='signbtn' value="Submit" onClick={doSign}>Sign Up</button>
         </center>
       </form>
+      </div>
     </div>
+    //  </div>
   );
 }
 

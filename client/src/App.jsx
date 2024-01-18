@@ -50,10 +50,8 @@ function App() {
           <Route path='/collaborationPerson' element={<CollabPerson></CollabPerson>}></Route>
           <Route path='/collaborationBand' element={<CollabBand></CollabBand>}></Route>
           <Route path='/gamescard' element={<GamesCard></GamesCard>}></Route>
-          {/* <Route path='/quiz' element={<Quiz></Quiz>}></Route> */}
         </Routes>
       </BrowserRouter>
-      {/* <Footer /> */}
     </>
   )
 }

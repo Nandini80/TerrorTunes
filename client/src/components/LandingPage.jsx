@@ -1,4 +1,4 @@
-import Navbar from "./Landingpage/components/Navbar";
+import Navbar from "./LandingPagee/Navbar";
 import './LandingPagee/LandingPage.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
