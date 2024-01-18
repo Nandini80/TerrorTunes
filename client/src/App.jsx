@@ -18,6 +18,7 @@ import CollabPerson from './components/CollaborationPerson.jsx';
 import CollabBand from './components/CollaborationBand.jsx';
 import LandingPage from './components/LandingPage.jsx';
 import CardConjure from './components/TheCardConjure/CardConjure.jsx';
+import Doomed from './components/DoomedMelodies/Doomed.jsx';
 
 function App() {
 
@@ -44,14 +45,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Navbar /> */}
         <Routes>
           <Route path='/' element={<LandingPage />} />
-
-          
-          {/* <Route path='/' element={<Home />}></Route>
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} /> */}
           <Route path='/Signup' element={token ?<Navigate to={user.desig === "person" ? "/person":"/band"} /> :<Signup />} />
           <Route path='/login' element={token ?<Navigate to={user.desig === "person" ? "/person":"/band"} /> :<Login />} />
           <Route path='/dashboard' element={<Dashboard />} />
@@ -61,6 +56,7 @@ function App() {
           <Route path='/PersonProfile' element={<PersonProf></PersonProf>}></Route>
           <Route path='/collaborationPerson' element={<CollabPerson></CollabPerson>}></Route>
           <Route path='/collaborationBand' element={<CollabBand></CollabBand>}></Route>
+          <Route path='/doomed' element={<Doomed></Doomed>}></Route>
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}
