@@ -28,11 +28,11 @@ d. Spooky Scrabble
 Unscramble the letters to reveal spooky words in this eerie rendition of the classic word game.
 
 Installation
-Clone the repository: git clone https://github.com/your-username/terror-tunes
+Clone the repository: git clone https://github.com/Nandini80/TerrorTunes
+
+FOR BACKEND
 Navigate to the project directory: cd terror-tunes
 Install dependencies: npm install
-Usage
-Run the application: npm start
-Open the application in your web browser: http://localhost:3000
+Run the application: npm run dev
 
-Make Your Music Experience Spooky
+Make Your Music Experience Spooky and nice
