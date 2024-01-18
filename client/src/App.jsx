@@ -16,7 +16,8 @@ import ProviderProfile from './components/BandInfo.jsx';
 import PersonProf from './components/PersonInfo.jsx';
 import CollabPerson from './components/CollaborationPerson.jsx';
 import CollabBand from './components/CollaborationBand.jsx';
-import UpperPart from './components/LandingPage.jsx';
+import LandingPage from './components/LandingPage.jsx';
+import CardConjure from './components/TheCardConjure/CardConjure.jsx';
 
 function App() {
 
@@ -42,13 +43,16 @@ function App() {
 
   return (
     <>
+    <CardConjure />
       <BrowserRouter>
         {/* <Navbar /> */}
         <Routes>
-          {/* <Route path='/' element={<Home />} />
+          {/* <Route path='/' element={<LandingPage />} /> */}
+
+          
+          {/* <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} /> */}
-          <Route path='/' element={<UpperPart />}></Route>
           <Route path='/Signup' element={token ?<Navigate to={user.desig === "person" ? "/person":"/band"} /> :<Signup />} />
           <Route path='/login' element={token ?<Navigate to={user.desig === "person" ? "/person":"/band"} /> :<Login />} />
           <Route path='/dashboard' element={<Dashboard />} />

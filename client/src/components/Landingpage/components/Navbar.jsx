@@ -57,7 +57,7 @@ const Navbar = () => {
         component="nav" 
         position="sticky"
         sx={{ 
-            backgroundColor: 'orange', 
+            backgroundColor: 'black', 
         }}
         elevation={0}
         >

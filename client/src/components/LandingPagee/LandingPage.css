@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  background-color: black;
+}
+.middle-part {
+  background-image: url("../../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  width: 100vw;
+  height: 30rem;
+  background-color: black;
+}
+.text-area {
+  width: 100vw;
+  color: white;
+  font-size: xxx-large;
+  text-align: center;
+}
+.cards {
+  background-color: red;
+  width: 100vw;
+  height: 20rem;
+}
