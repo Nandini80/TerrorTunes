@@ -80,7 +80,7 @@ function Signup() {
             <p>{errobj.pass}</p>
           </div>
           <div className="input-container">
-            <label>Designation:</label>
+            <label className='lab'>Category:</label>
             <select name="desig" onChange={doUpdatetxt} onBlur={doCheck} required >
               <option value="" disabled selected> Select </option>
               <option value="band">Band</option>
