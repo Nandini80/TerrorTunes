@@ -67,7 +67,7 @@ const Navbar = () => {
                 component="h2"
 
                 >
-                    HBSales
+                    TERROR TUNES
                 </Typography>
                 <Box sx={{display: { xs: 'block', sm: 'none' } }}>
                     <DrawerItem /> 
