@@ -13,6 +13,7 @@ import CollabPerson from './components/CollaborationPerson.jsx';
 import CollabBand from './components/CollaborationBand.jsx';
 import LandingPage from './components/LandingPage.jsx';
 import Quiz from './components/QuizOfTheUnKnown/quiz.jsx'
+import CardConjure from './components/TheCardConjure/CardConjure.jsx';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
           <Route path='/collaborationPerson' element={<CollabPerson></CollabPerson>}></Route>
           <Route path='/collaborationBand' element={<CollabBand></CollabBand>}></Route>
           {/* <Route path='/quiz' element={<Quiz></Quiz>}></Route> */}
+          <Route path='/doomed' element={<Doomed></Doomed>}></Route>
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}
