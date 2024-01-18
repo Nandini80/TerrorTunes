@@ -43,11 +43,10 @@ function App() {
 
   return (
     <>
-    <CardConjure />
       <BrowserRouter>
         {/* <Navbar /> */}
         <Routes>
-          {/* <Route path='/' element={<LandingPage />} /> */}
+          <Route path='/' element={<LandingPage />} />
 
           
           {/* <Route path='/' element={<Home />}></Route>
