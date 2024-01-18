@@ -103,7 +103,7 @@ function Profile() {
 
         <Row className="mb-2 offset-md-2">
           <Form.Group as={Col} md="4" style={{ margin: "40px" }}>
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Band Name</Form.Label>
             <Form.Control
               required
               type="text"

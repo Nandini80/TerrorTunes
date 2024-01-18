@@ -21,10 +21,10 @@
 }
 .cards {
  
-  /* height: 2 0rem; */
-  /* display: flex; */
+  height: 2 0rem; 
+  display: flex;
   /* justify-content: center; */
   /* align-items: center; */
-  /* flex-direction: row; */
+  /* flex-direction: row;
   /* float: right; */
 }

@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import bg from '../assets/bg.jpg';
 import Row from "react-bootstrap/esm/Row";
 
-{/* <Image src={logo} width={45} className='me-2 ms-4' height={45} rounded /> */}
+
 function LandingPage() {
   return (
     <>
@@ -18,7 +18,7 @@ function LandingPage() {
           
         </div>
 
-        <div>
+        <div className="cards">
           <Row>
         <Card bg="dark" key="dark" text="light">
       <Card.Img variant="top" src="holder.js/100px180" />

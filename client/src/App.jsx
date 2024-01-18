@@ -1,11 +1,6 @@
 // import './App.css';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import Home from './components/Landingpage/pages/Home.jsx';
-import About from './components/Landingpage/pages/About.jsx';
-import Contact from './components/Landingpage/pages/Contact.jsx';
-import Navbar from './components/Landingpage/components/Navbar.jsx'
-import Footer from './components/Landingpage/components/Footer/Footer.jsx';
 import Login from './components/login.jsx';
 import Signup from './components/signup.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
@@ -17,8 +12,6 @@ import PersonProf from './components/PersonInfo.jsx';
 import CollabPerson from './components/CollaborationPerson.jsx';
 import CollabBand from './components/CollaborationBand.jsx';
 import LandingPage from './components/LandingPage.jsx';
-import CardConjure from './components/TheCardConjure/CardConjure.jsx';
-import Doomed from './components/DoomedMelodies/Doomed.jsx';
 
 function App() {
 
@@ -56,7 +49,7 @@ function App() {
           <Route path='/PersonProfile' element={<PersonProf></PersonProf>}></Route>
           <Route path='/collaborationPerson' element={<CollabPerson></CollabPerson>}></Route>
           <Route path='/collaborationBand' element={<CollabBand></CollabBand>}></Route>
-          <Route path='/doomed' element={<Doomed></Doomed>}></Route>
+          {/* <Route path='/quiz' element={<Quiz></Quiz>}></Route> */}
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}

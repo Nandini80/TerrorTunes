@@ -4,7 +4,7 @@ import "./quiz.css";
 import questions from "./ques.jsx";
 import pic from './img3.jpg';
 
-function App() {
+function Quiz() {
   const shuffledQuestions = [...questions].sort(() => Math.random() - 0.2).slice(0, 5);
 
   const [showResults, setShowResults] = useState(false);
@@ -73,7 +73,7 @@ function App() {
   );
 }
 
-export default App;
+export default Quiz;
 
 
 
