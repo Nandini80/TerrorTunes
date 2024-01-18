@@ -1,4 +1,3 @@
-// import './App.css';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Login from './components/login.jsx';
