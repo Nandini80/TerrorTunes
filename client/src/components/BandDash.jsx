@@ -57,38 +57,81 @@ function PDash() {
   
   return (
     <div>
-      <center>
-       <h1 className='mt-3'>WELCOME {aemail}</h1> 
+      <div>
+        <center>
+          <h1 className="mt-3">
+            WELCOME {aemail} <span id="user-email" />
+          </h1>
         </center>
-        <div className='cards'>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="pics/profile.jpg" />
-          <Card.Body>
-           <Card.Title><center>Band Information</center></Card.Title>
-          <center> <Button variant="primary" onClick={doNavigate1}>Click here</Button></center>
-          </Card.Body>
-        </Card>
+        <div className="fl">
+        <div className="cards">
+        <div
+          style={{ width: "18rem", display: "flex", flexDirection: "column" }}
+        >
+          <img
+            src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg"
+            className="card-img-top"
+            alt="Profile"
+          />
+          <div className="card-body">
+            <h3 className="card-title">
+              <center>Band Information</center>
+            </h3>
+            <center>
+              <button className="btn btn-primary" onclick={doNavigate1}>
+                Click here
+              </button>
+            </center>
+          </div>
         </div>
-        <div className='cards'>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="pics/s5.jpg" />
-          <Card.Body>
-           <Card.Title><center>Collaboration</center></Card.Title>
-          <center> <Button variant="primary" onClick={doNavigate2}>Click here</Button></center>
-          </Card.Body>
-        </Card>
+      </div>
+      <div className="cards">
+        <div
+          style={{ width: "18rem", display: "flex", flexDirection: "column" }}
+        >
+          <img
+            src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg"
+            className="card-img-top"
+            alt="Collaboration"
+          />
+          <div className="card-body">
+            <h3 className="card-title">
+              <center>Collaboration</center>
+            </h3>
+            <center>
+              <button className="btn btn-primary" onclick={doNavigate2}>
+                Click here
+              </button>
+            </center>
+          </div>
         </div>
-        <div className='cards'>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="pics/logout.jpg" height={"265"} /> <hr />
-          <Card.Body>
-           <Card.Title><center>Logout</center></Card.Title>
-          <center> <Button variant="primary" onClick={doLogout}>Click here</Button></center>
-          </Card.Body>
-        </Card>
+      </div>
+          <div className="cards">
+            <div
+              style={{ width: "18rem", display: "flex", flexDirection: "column" }}
+            >
+              <img
+                src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg"
+                className="card-img-top"
+                alt="Logout"
+              />
+              <div className="card-body">
+                <h3 className="card-title">
+                  <center>Logout</center>
+                </h3>
+                <center>
+                  {/* Corrected attribute name to onClick */}
+                  <button className="btn btn-primary" onClick={doLogout}>
+                    Click here
+                  </button>
+                </center>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default PDash;
