@@ -1,0 +1,70 @@
+.outer{
+    height: 100vh;
+    background-image: url('./g4.jpg');
+    background-size: cover;
+}
+
+.signupcon{
+
+    height: auto;
+    width: 90%; /* Adjusted for responsiveness */
+    position: absolute;
+    top:10rem;
+    left: 35rem;
+    max-width: 400px; /* Set a maximum width for larger screens */
+    margin: auto; /* Center the logincon */
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 0 10px #2AFF3D, 0 0 20px #2AFF3D, 0 0 30px #2AFF3D;
+}
+.myform {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .heading {
+    color: #2AFF3D;
+  }
+  
+  .lab {
+    color: aliceblue;
+  }
+
+  form p {
+    color: rgb(138, 138, 117);
+  }
+  
+  .signbtn {
+    height: 3rem;
+    width: 60%; 
+    max-width: 150px; 
+    border-radius: 1rem;
+    background-color: rgb(107, 255, 122);
+    color: black;
+    border: 1px solid rgb(255, 41, 41);
+  }
+  
+  .signbtn:active {
+    background-color: rgb(56, 104, 61);
+  }
+
+  @media screen and (max-width: 768px) {
+    .signupcon {
+      width: 90%; /* Adjusted width for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .signupcon {
+      width: 100%; /* Full width for even smaller screens */
+    }
+    .myform {
+      margin-left: 10px; /* Adjusted for smaller screens */
+      margin-right: 10px;
+    }
+  }
