@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';  
 import '../Styling/SignupCSS.css';  
 import { signupservice } from '../services/user';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
-  const [obj, dosignup] = useState({ email: "", pass: "" });
-  const [errobj, doUpdateErr] = useState({ email: "", pass: "" });
+  const [obj, dosignup] = useState({ email: "", pass: "", desig: "" });
+  const [errobj, doUpdateErr] = useState({ email: "", pass: "", desig: "" })
+  const navigate = useNavigate();
 
   const doUpdatetxt = (event) => {
     var { name, value } = event.target;
@@ -23,12 +26,21 @@ function Signup() {
       return;
     }
 
+    if (name === "desig" && value == "") {
+      doUpdateErr({ ...errobj, ["desig"]: "Please Enter your Designation" });
+      return;
+    }
+
     if (name === "pass" && value != "") {
       doUpdateErr({ ...errobj, ["pass"]: "Correct" });
     }
 
     if (name === "email" && value != "") {
       doUpdateErr({ ...errobj, ["email"]: "Correct" });
+    }
+
+    if (name === "desig" && value != "") {
+      doUpdateErr({ ...errobj, ["desig"]: "Correct" });
     }
   }
 
@@ -45,6 +57,7 @@ function Signup() {
      const doSign=async()=>{
       const res = await signupservice(obj);
       alert(JSON.stringify(res.data));
+      navigate("/");
      }
 
   return (
@@ -61,6 +74,15 @@ function Signup() {
             <label>Password:</label>
             <input type="password" name="pass" onChange={doUpdatetxt} onBlur={doCheck} required />
             <p>{errobj.pass}</p>
+          </div>
+          <div className="input-container">
+            <label>Designation:</label>
+            <select name="desig" onChange={doUpdatetxt} onBlur={doCheck} required >
+              <option value="" disabled selected> Select </option>
+              <option value="band">Band</option>
+              <option value="person">Person</option>
+            </select>
+            <p>{errobj.desig}</p>
           </div>
           <button value="Submit" onClick={doSign}>Sign Up</button>
         </center>

@@ -5,15 +5,20 @@ function GetPersonschema() {
     var colSchema = new SchemaClass({
         email: { type: String, required: true, unique: true, index: true },
         name: { type: String },
-        contact: { type: String },
+        mobile: { type: String },
         musicstyle: { type: String },
-        experience: { type: Number },
+        exp: { type: String },
+        state:String,
+        city:String,
+        address:String,
+        // pp:String,
+        // idProof:String,
     }, {
         versionKey: false
     });
 
-    var personColRef = mongoose.model("personschema", colSchema);
-    return personColRef;
+    var PersonColRef = mongoose.model("Person", colSchema);
+    return PersonColRef;
 }
 
 module.exports = GetPersonschema;

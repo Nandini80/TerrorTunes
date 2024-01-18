@@ -1,7 +1,6 @@
-import { useState } from 'react';
-// import axios from 'axios';
+import React, { useState } from 'react';
+import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
-import { Dologin } from '../services/user';
 
 function Login() 
 {
@@ -34,12 +33,14 @@ function Login()
     if (name === "email" && value != "") {
       doUpdateErr({ ...errobj, ["email"]: "Correct" });
     }
-  };
+  }
 
-  const doSubmit=async()=>{
-    const resp = await Dologin(obj);
-    alert(JSON.stringify(resp.data));
-    if(resp.data.status===false)
+  const doSubmit=async ()=>{
+    //For post
+     var url = "http://localhost:2000/user/Login"; 
+     var resp = await axios.post(url,obj);
+    //  alert(JSON.stringify(resp.data));
+     if(resp.data.status===false)
      {
       alert(resp.data.message);
      }
@@ -48,41 +49,16 @@ function Login()
       //  alert(resp.data.message);
        localStorage.setItem("token",resp.data.token);//add key value pair in browser memory
        localStorage.setItem("user_email",resp.data.user.email);
-       if(resp.data.user.desig==="client")
+       if(resp.data.user.desig==="person")
        {
-        navigate("/client");
+        navigate("/person");
        }
       else
       {
-        navigate("/provider");
+        navigate("/band");
       }
      }
-   };
-
-//   const doSubmit=async ()=>{
-//     //For post
-//      var url = "http://localhost:2000/user/Login"; 
-//      var resp = await axios.post(url,obj);
-//     //  alert(JSON.stringify(resp.data));
-//      if(resp.data.status===false)
-//      {
-//       alert(resp.data.message);
-//      }
-//      else
-//      {
-//       //  alert(resp.data.message);
-//        localStorage.setItem("token",resp.data.token);//add key value pair in browser memory
-//        localStorage.setItem("user_email",resp.data.user.email);
-//        if(resp.data.user.desig==="client")
-//        {
-//         navigate("/client");
-//        }
-//       else
-//       {
-//         navigate("/provider");
-//       }
-//      }
-//   };
+  };
 
   return (
     <div className="signup-container mt-5">

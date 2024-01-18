@@ -1,48 +1,55 @@
-const userschema = require("../modal/user.schema");
-const userColRef = userschema();
-const webtoken = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+var userschema = require("../modal/user.schema");
+var userColRef = userschema();
+var webtoken = require("jsonwebtoken");
 
-async function signup(req, resp) {
-    try {
-        const hashedPassword = await bcrypt.hash(req.body.pass, 10);
-        const obj = new userColRef({
-            email: req.body.email,
-            pass: hashedPassword,
-        });
-        await obj.save();
-        resp.send("Signed up successfully");
-    } catch (err) {
-        resp.status(500).json({ status: false, message: "Error during signup", error: err });
-    }
-}
+async function signup(req,resp)
+{ 
+   var obj = new userColRef(req.body);
+   await obj.save().then((obj)=>{
+    resp.send("Signed up succesfullyy");
+   }).catch((err)=>{
+    resp.send(err);
+   });
+}; 
 
-async function login(req, resp) {
-    try {
-        const user = await userColRef.findOne({ email: req.body.email });
-        if (!user || !(await bcrypt.compare(req.body.pass, user.pass))) {
-            resp.status(401).json({ status: false, message: "Invalid email or password" });
-            return;
-        }
+async function login(req,resp)
+{  
+   const count = await userColRef.find({email:req.body.email}).count();
+   if(count==0)
+   {
+      resp.json({status:false,message:"Invalid user id "});
+      return ;
+   }
+   else 
+   {
+      var user =  await userColRef.findOne({email:req.body.email,pass:req.body.pass});
+      if(user!=null)
+      {
+         var token = webtoken.sign({email:user.email,desig:user.desig},process.env.sec_key,{expiresIn:'1h'});
+         resp.json({status:true,user,token,message:"Valid User"});
+         return;
+      }
+      else
+      {
+        resp.json({status:false,message:"Invalid Password"});
+        return ;
+      }
+   }
+};
 
-        const token = webtoken.sign({ email: user.email, desig: user.desig }, process.env.SECRET_KEY, { expiresIn: '1h' });
-        resp.json({ status: true, user, token, message: "Valid User" });
-    } catch (error) {
-        resp.status(500).json({ status: false, message: "An error occurred during login", error });
-    }
-}
-
-async function CurrentUser(req, resp) {
-    try {
-        const user = await userColRef.findOne({ email: req.email });
-        if (!user) {
-            resp.status(404).json({ status: false, message: "User not found" });
-            return;
-        }
-        resp.json({ status: true, message: "OK user id", user });
-    } catch (error) {
-        resp.status(500).json({ status: false, message: "An error occurred while fetching the current user", error });
-    }
-}
-
-module.exports = { signup, login, CurrentUser };
+async function CurrentUser(req,resp)
+{
+   const count = await userColRef.find({email:req.email}).count();
+   if(count==0)
+   {
+      resp.json({status:false,message:"Invalid user id "});
+      return ;
+   }
+   else
+   {
+      var user =  await userColRef.findOne({email:req.email});
+      resp.json({status:true,message:"OK user id",user});
+      return ;
+   }
+};
+module.exports ={signup,login,CurrentUser};

@@ -6,18 +6,13 @@ const signupservice =(data)=>
     return publicReq.post("/user/Signup",data);
 }; 
 
-const Dologin =(data)=>
-{
-    return publicReq.post("/user/Login",data);
-}; 
-
 const getUserService=()=>{
     return privateReq.get("/user/CurrentUser");
 };
 
 const DistinctCatService =()=>
 {
-    return publicReq.get("/provider/distinct-services");
+    return publicReq.get("/band/distinct-services");
 }; 
 
 const fetchProviders=(data)=>{
@@ -35,4 +30,4 @@ const fetchClient=(data)=>{
 
 export {};
 
-export {getUserService,signupservice,DistinctCatService,fetchProviders,DistinctCityClient,fetchClient,Dologin};
+export {getUserService,signupservice,DistinctCatService,fetchProviders,DistinctCityClient,fetchClient};

@@ -1,20 +1,25 @@
 var mongoose = require("mongoose");
 
-function GetBandschema() {
+function Bandschema() {
     var SchemaClass = mongoose.Schema;
     var colSchema = new SchemaClass({
         email: { type: String, required: true, unique: true, index: true },
-        bandname: { type: String },
-        contact: { type: String },
+        name: { type: String },
+        mobile: { type: String },
         musicstyle: { type: String },
-        experience: { type: Number },
-        members : {type : Number},
+        exp: { type: String },
+        members : {type : String},
+        state:String,
+        city:String,
+        address:String,
+        // idProof:String,
+        // cat:String,
     }, {
         versionKey: false
     });
 
-    var bandColRef = mongoose.model("bandschema", colSchema);
-    return bandColRef;
+    var BandColRef = mongoose.model("Band", colSchema);
+    return BandColRef;
 }
 
-module.exports = GetBandschema;
+module.exports = Bandschema;

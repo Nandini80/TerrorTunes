@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "express-fileupload": "^1.4.3",
     "mongoose": "^8.1.0"
   }
 }

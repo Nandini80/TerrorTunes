@@ -3,11 +3,12 @@ var controller = require("../controller/band.controller");
 var app = express.Router();
 // var {jawth} = require("../middleware/auth");
 
-app.post("/SaveInfo", controller.SaveInfo);
-app.post("/doUpdate", controller.updateinfo);
-app.post("/doFetch", controller.fetchinfo);
+app.post("/profile",controller.SaveProfile);
+app.post("/doUpdate",controller.updateProfile);
+app.post("/doFetch",controller.fetchProfile);
 
-app.get("/specialization", controller.specialization);
-app.post("/fetchBand", controller.fetchBand);
+
+app.get("/distinct-services",controller.distServices);
+app.post("/fetchprovider",controller.fetchprovider);
 
 module.exports = app;
