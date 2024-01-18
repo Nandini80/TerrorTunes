@@ -73,7 +73,7 @@ function CDash() {
               <center>Profile Page</center>
             </h3>
             <center>
-              <button className="btn btn-primary" onclick={() => doNavigate(1)}>
+              <button className="btn btn-primary" onClick={() => doNavigate(1)}>
                 Click here
               </button>
             </center>
@@ -94,7 +94,7 @@ function CDash() {
               <center>Collaboration</center>
             </h3>
             <center>
-              <button className="btn btn-primary" onclick={() => doNavigate(3)}>
+              <button className="btn btn-primary" onClick={() => doNavigate(3)}>
                 Click here
               </button>
             </center>
