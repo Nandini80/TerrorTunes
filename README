@@ -35,4 +35,4 @@ Navigate to the project directory: cd terror-tunes
 Install dependencies: npm install
 Run the application: npm run dev
 
-Make Your Music Experience Spooky
+Make Your Music Experience Spooky and nice
