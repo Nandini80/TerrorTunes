@@ -63,7 +63,8 @@ function Signup() {
 
   return (
   <div className="outer">
-    <Navbar/>
+    <div className="nav">
+    <Navbar/></div>
     <div className="signupcon">
     {/* <div className="signup-container mt-4"> */}
       <form method="post" name='myform'>

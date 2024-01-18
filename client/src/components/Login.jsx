@@ -63,7 +63,8 @@ function Login()
 
   return (
     <div className='outer'>
-      <Navbar/>
+      <div className="nav">
+      <Navbar/></div>
       <div className='logincon'>
     {/* <div className="signup-container mt-5 "> */}
       <form method="post" className='myform'>

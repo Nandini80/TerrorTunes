@@ -1,18 +1,33 @@
 
 .outer {
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url('./g4.jpg');
-    background-size: cover;
+    display:flex;
+    justify-content:center ;
+    flex-direction: column;
+    align-items: center;
+    /* background-size: cover; */
+    object-fit: cover;
+    overflow-y: hidden;
+    background-size: 100% 100%;
+    /* background-position: center;  */
+
   }
-  
+  .nav{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+
   .logincon {
-    height: auto;
-    width: 90%; /* Adjusted for responsiveness */
+     height: auto;
+    width: 90%; 
     position: absolute;
     top:10rem;
-    left: 35rem;
-    max-width: 400px; /* Set a maximum width for larger screens */
-    margin: auto; /* Center the logincon */
+    left:50%;
+    transform: translateX(-50%);
+    max-width: 400px; 
+    margin: auto; 
     padding: 20px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(3px);
@@ -21,7 +36,9 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     box-shadow: 0 0 10px #2AFF3D, 0 0 20px #2AFF3D, 0 0 30px #2AFF3D;
-  }
+     
+    }
+        
   
   .myform {
     margin-top: 2rem;
