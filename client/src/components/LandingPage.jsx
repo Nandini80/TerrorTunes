@@ -3,27 +3,12 @@ import "./LandingPagee/LandingPage.css";
 // import { useEffect, useRef } from "react";
 // import sound from "../assets/backgroundsound.mp3";
 import GamesCard from "./LandingPagee/GamesCard";
-
+// import Footer from "./LandingPagee/Footer";
 function LandingPage() {
-  // const audioRef = useRef(null);
-  // useEffect(() => {
-  //   const audio = audioRef.current;
-  //   audio.addEventListener("ended", () => {
-
-  //   });
-  //   return () => {
-  //     audio.removeEventListener("ended", () => {
-
-  //     });
-  //   };
-  // }, []);
 
   return (
     <>
       <div className="wrapper">
-        {/* <audio ref={audioRef} autoPlay loop> */}
-          {/* <source src={sound} type="audio/mp3" /> */}
-        {/* </audio> */}
         <Navbar />
         <div className="middle-part">
           <div className="text-area">
@@ -38,6 +23,10 @@ function LandingPage() {
           <GamesCard />
         </div>
       </div>
+      {/* <div className="flex-container">
+            <Footer />
+            
+        </div> */}
     </>
   );
 }
