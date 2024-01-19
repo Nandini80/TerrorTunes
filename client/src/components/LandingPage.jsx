@@ -3,52 +3,17 @@ import "./LandingPagee/LandingPage.css";
 import { useEffect, useRef } from "react";
 import sound from "../assets/backgroundsound.mp3";
 import GamesCard from "./LandingPagee/GamesCard";
-<<<<<<< HEAD
 // import Footer from "./LandingPagee/Footer";
-=======
-
->>>>>>> 449514878778096df350baeb6ae6f88e8ee45624
 function LandingPage() {
   const audioRef = useRef(null);
   useEffect(() => {
     const audio = audioRef.current;
-<<<<<<< HEAD
-    const handleEnded = () => {
-      // Reset the currentTime to 0 to replay the audio
-      audio.currentTime = 0;
-      audio.play();
-    };
-    audio.addEventListener("ended", handleEnded);
+    audio.addEventListener("ended", () => {});
     return () => {
-      audio.removeEventListener("ended", handleEnded);
-=======
-    audio.addEventListener("ended", () => {
-
-    });
-    return () => {
-      audio.removeEventListener("ended", () => {
-
-      });
->>>>>>> 449514878778096df350baeb6ae6f88e8ee45624
+      audio.removeEventListener("ended", () => {});
     };
   }, []);
- 
 
-  // useEffect(() => {
-  //   const audio = audioRef.current;
-  
-  //   const handleEnded = () => {
-  //     // Reset the currentTime to 0 to replay the audio
-  //     audio.currentTime = 0;
-  //     audio.play();
-  //   };
-  
-  //   audio.addEventListener("ended", handleEnded);
-  
-  //   return () => {
-  //     audio.removeEventListener("ended", handleEnded);
-  //   };
-  // }, []);
   
   
 
@@ -72,6 +37,10 @@ function LandingPage() {
           <GamesCard />
         </div>
       </div>
+      {/* <div className="flex-container">
+            <Footer />
+            
+        </div> */}
     </>
   );
 }
