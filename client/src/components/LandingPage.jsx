@@ -4,22 +4,45 @@ import { useEffect, useRef } from "react";
 import sound from "../assets/backgroundsound.mp3";
 import GamesCard from "./LandingPagee/GamesCard";
 // import Footer from "./LandingPagee/Footer";
-
 function LandingPage() {
   const audioRef = useRef(null);
   useEffect(() => {
     const audio = audioRef.current;
-    audio.addEventListener("ended", () => {});
+    const handleEnded = () => {
+      // Reset the currentTime to 0 to replay the audio
+      audio.currentTime = 0;
+      audio.play();
+    };
+    audio.addEventListener("ended", handleEnded);
     return () => {
-      audio.removeEventListener("ended", () => {});
+      audio.removeEventListener("ended", handleEnded);
     };
   }, []);
+ 
+
+  // useEffect(() => {
+  //   const audio = audioRef.current;
+  
+  //   const handleEnded = () => {
+  //     // Reset the currentTime to 0 to replay the audio
+  //     audio.currentTime = 0;
+  //     audio.play();
+  //   };
+  
+  //   audio.addEventListener("ended", handleEnded);
+  
+  //   return () => {
+  //     audio.removeEventListener("ended", handleEnded);
+  //   };
+  // }, []);
+  
+  
 
   return (
     <>
       <div className="wrapper">
-        <audio ref={audioRef} autoPlay loop>
-          <source src={sound} type="audio/mp3" />
+        <audio ref={audioRef} autoPlay loop  >
+          <source src={sound} type="audio/mp3" autoPlay loop  />
         </audio>
         <Navbar />
         <div className="middle-part">

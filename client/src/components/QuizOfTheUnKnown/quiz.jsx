@@ -4,6 +4,7 @@ import "./quiz.css";
 import questions from "./ques.jsx";
 // import pic from './img3.jpg';
 
+
 function Quiz() {
   const shuffledQuestions = [...questions].sort(() => Math.random() - 0.2).slice(0, 5);
 
