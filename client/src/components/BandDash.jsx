@@ -4,6 +4,9 @@ import Card from "react-bootstrap/Card";
 import "./PDashCSS.css";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import collab from '../assets/collaborationband.jpg';
+import profilepic from '../assets/profileband.jpg';
+import logoutpic from '../assets/logoutband.jpg';
 
 function PDash() {
   var [aemail, setobj] = useState("");
@@ -56,7 +59,7 @@ function PDash() {
       <div className="main">
         <center>
           <h1 className="mt-3">
-            WELCOME <span id="user-email"></span>
+            WELCOME <span id="user-email"> {aemail}</span>
           </h1>
         </center>
         <div className="fl">
@@ -69,9 +72,10 @@ function PDash() {
               }}
             >
               <img
-                src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg"
+                src={profilepic}
                 className="card-img-top"
                 alt="Profile"
+                height={385}
               />
               <div className="card-body">
                 <h3 className="card-title">
@@ -94,9 +98,10 @@ function PDash() {
               }}
             >
               <img
-                src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg"
+                src={collab}
                 className="card-img-top"
                 alt="Collaboration"
+                height={385}
               />
               <div className="card-body">
                 <h3 className="card-title">
@@ -118,9 +123,10 @@ function PDash() {
               }}
             >
               <img
-                src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg"
+                src={logoutpic}
                 className="card-img-top"
                 alt="Logout"
+                height={385}
               />
               <div className="card-body">
                 <h3 className="card-title">

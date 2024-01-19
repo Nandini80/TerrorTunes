@@ -5,6 +5,7 @@ import { signupservice } from '../services/user';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './LandingPagee/Navbar';
 import './signup.css'
+
 function Signup() {
   const [obj, dosignup] = useState({ email: "", pass: "", desig: "" });
   const [errobj, doUpdateErr] = useState({ email: "", pass: "", desig: "" })
