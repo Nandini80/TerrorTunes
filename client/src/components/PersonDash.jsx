@@ -128,7 +128,7 @@ function CDash() {
                 <h3 className="card-title">
                   <center>
                     <button className="profile-button" onClick={doLogout}>
-                      LogOut
+                      Logout
                     </button>
                   </center>
                 </h3>
