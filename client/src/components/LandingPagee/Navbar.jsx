@@ -32,7 +32,7 @@ import {
     },
     {
       text: "Games",
-      to: "/about",
+      to: "/",
     },
     {
       text: "Signup",
