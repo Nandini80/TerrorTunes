@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { DistinctStyle,fetchStyles } from '../services/user';
 import Card2 from './CardClientInfo';
+import bg from './g4.jpg';
 
 function FindClient() 
 {
@@ -37,7 +38,7 @@ function FindClient()
        }
 
   return (
-    <div style={{backgroundColor:"black",height:"100vh",overflow:"hidden"}}>
+    <div style={{backgroundImage: `url(${bg})`,height:"100vh",overflow:"hidden"}}>
 
        <center>
        <h1 className='mt-3' style={{color:"white"}}>Find your next team member.</h1>
