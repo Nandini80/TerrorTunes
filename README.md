@@ -1,4 +1,4 @@
-Terror Tunes
+## Terror Tunes
 Welcome to Terror Tunes, where horror meets harmony! This interactive project brings a spine-chilling twist to the world of music. Dive into a realm of haunted melodies, interactive games, and a community of musical aficionados.
 
 Features

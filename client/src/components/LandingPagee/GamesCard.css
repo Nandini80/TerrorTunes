@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Homemade+Apple&display=swap');
+
 * {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+  }
+
+  .sectionHead{
+    color: white;
+    font-family: "Creepster", system-ui;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
   }
   .event-final {
     display: flex;
@@ -47,34 +57,34 @@
   }
   .box1
   {
-      background-image: url("../../static/hackstreet.png");
+      background-image: url("../../assets/Instrumentss.jpeg");
   
   }
   .box2
   {
-      background-image: url("https://res.cloudinary.com/dm0muijpa/image/upload/q_auto/xenith-23/events/rterror_fpbhak.png");
+      background-image: url("../../assets/SpookyScrable.png");
   
   }
   .box3
   {
-      background-image: url("https://res.cloudinary.com/dm0muijpa/image/upload/q_auto/xenith-23/events/tt_striver_hpvcyn.png");
+      background-image: url("../../assets/CardConjure.jpg");
   
   }
   .box4
   {
-      background-image: url("https://res.cloudinary.com/dm0muijpa/image/upload/q_auto/xenith-23/events/tarc_h70poa.png");
-  
+      background-image: url("../../assets/ScreemTunes.png");
+      background-size: auto 180%;
   }
   .box5
   {
-      background-image: url("https://res.cloudinary.com/dm0muijpa/image/upload/q_auto/xenith-23/events/tt_utkarsh_eicnfb.png");
+      background-image: url("../../assets/Quiz.jpg");
   
   }
-  .box6
+  /* .box6
   {
       background-image: url("https://res.cloudinary.com/dm0muijpa/image/upload/v1675352900/xenith-23/events/treasure_trail_smocmd.png");
   
-  }
+  } */
   .containerevent .card .box .content12 {
     padding: 20px;
     text-align: center;
@@ -98,7 +108,7 @@
   }
   .containerevent .card .box:hover .content12 h2,
   .containerevent .card .box:focus .content12 h2 {
-    color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.1);
   }
   .containerevent .card .box .content12 h3 {
     font-size: 1.8em;

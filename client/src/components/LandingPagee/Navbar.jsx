@@ -11,6 +11,7 @@ import {
   } from "@mui/material";
   import DrawerItem from "./DrawerItem";
   import { Link } from "react-router-dom";
+  import logo from '../../assets/logo2.jpg';
   
   const StyledToolbar = styled(Toolbar)({
     display: "flex",
@@ -59,7 +60,7 @@ import {
       >
         <StyledToolbar>
           <Typography variant="h6" component="h2">
-            Terror Tunes
+            <img src={logo}  alt="Terror Tunes" height={80} width={110}/>
           </Typography>
           <Box sx={{ display: { xs: "block", sm: "none" } }}>
             <DrawerItem />

@@ -1,30 +1,51 @@
+/* LandingPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Homemade+Apple&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
+
 .wrapper {
   background-color: black;
 }
+
 .middle-part {
   background-image: url("../../assets/backhorror.gif");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100vw;
   height: 40rem;
+  font-family: "Creepster", system-ui;
   background-color: black;
 }
+
 .text-area {
   width: 100vw;
   color: white;
   font-size: xxx-large;
   text-align: center;
 }
-.cards {
- 
-  height: 2 0rem; 
-  display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* flex-direction: row;
-  /* float: right; */
+
+.text-area p {
+  font-size: medium;
 }
+
+.cards {
+  height: 20rem;
+  display: flex;
+}
+
+.gamescards-comp {
+  height: 70rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  background-color: red;
+}
+
+  
