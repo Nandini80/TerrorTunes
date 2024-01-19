@@ -51,81 +51,46 @@ function CDash() {
 
   return (
     <div>
-      <div>
-      <div style={{ backgroundImage: `url('https://wallpaperdj.com/wallpapers/vinyl_life-1152x864.jpg')` }}>
+       <div className="main">
         <center>
-          <h1 className="mt-3">
-            WELCOME {eml} <span id="user-email" />
-          </h1>
+          <h1 className="mt-3">WELCOME <span id="user-email"></span></h1>
         </center>
-        <div className="fl">
-        <div className="cards">
-        <div
-          style={{ width: "18rem", display: "flex", flexDirection: "column" }}
-        >
-          <img
-            src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg"
-            className="card-img-top"
-            alt="Profile"
-          />
-          <div className="card-body">
-            <h3 className="card-title">
-              <center>Profile Page</center>
-            </h3>
-            <center>
-              <button className="btn btn-primary" onClick={() => doNavigate(1)}>
-                Click here
-              </button>
-            </center>
-          </div>
-        </div>
-      </div>
-      <div className="cards">
-        <div
-          style={{ width: "18rem", display: "flex", flexDirection: "column" }}
-        >
-          <img
-            src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg"
-            className="card-img-top"
-            alt="Collaboration"
-          />
-          <div className="card-body">
-            <h3 className="card-title">
-              <center>Collaboration</center>
-            </h3>
-            <center>
-              <button className="btn btn-primary" onClick={() => doNavigate(3)}>
-                Click here
-              </button>
-            </center>
-          </div>
-        </div>
-      </div>
-          <div className="cards">
-            <div
-              style={{ width: "18rem", display: "flex", flexDirection: "column" }}
-            >
-              <img
-                src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg"
-                className="card-img-top"
-                alt="Logout"
-              />
+        <div className='fl'>
+          <div className='cards'>
+            <div style={{ width: '18rem', display: 'flex', flexDirection: 'column' }}>
+              <img src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg" className="card-img-top" alt="Profile" />
               <div className="card-body">
-                <h3 className="card-title">
-                  <center>Logout</center>
-                </h3>
+                <h3 className="card-title"><center>Person Profile</center></h3>
                 <center>
-                  {/* Corrected attribute name to onClick */}
-                  <button className="btn btn-primary" onClick={doLogout}>
-                    Click here
-                  </button>
+                  <button className="btn" onClick={() =>doNavigate(1)}>Click here</button>
+                </center>
+              </div>
+            </div>
+          </div>
+          <div className='cards'>
+            <div style={{ width: '18rem', display: 'flex', flexDirection: 'column' }}>
+              <img src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg" className="card-img-top" alt="Collaboration" />
+              <div className="card-body">
+                <h3 className="card-title"><center>Collaboration</center></h3>
+                <center>
+                  <button className="btn" onClick={() => doNavigate(3)}>Click here</button>
+                </center>
+              </div>
+            </div>
+          </div>
+          <div className='cards'>
+            <div style={{ width: '18rem', display: 'flex', flexDirection: 'column' }}>
+              <img src="https://www.researchgate.net/profile/Yury-Korolev-4/publication/337781850/figure/fig2/AS:832956675395585@1575603755767/Our-dataset-of-images-with-size-256-256-pixels-Images-are-free-to-use-Images-f-j_Q320.jpg" className="card-img-top" alt="Logout" />
+              <div className="card-body">
+                <h3 className="card-title"><center>Logout</center></h3>
+                <center>
+                  <button className="btn" onClick={doLogout}>Click here</button>
                 </center>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   )
 }
