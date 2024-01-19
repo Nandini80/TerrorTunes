@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import bg from "./g4.jpg";
 
 function Profile() {
   const [validated, setValidated] = useState(false);
@@ -75,7 +76,7 @@ function Profile() {
   }
 
   return (
-    <div>
+    <div style={{backgroundImage: `url(${bg})`,height:"100vh",color:"white"}}>
       <center>
         <h1>Person Profile</h1>
       </center>
@@ -98,8 +99,8 @@ function Profile() {
               // disabled
             />
           </Form.Group>
-          <Form.Group as={Col} className="mt-4 ms-5">
-            <Button type="button" as={Col} onClick={doFetchInfo}>
+          <Form.Group as={Col} className="mt-4 ms-5" >
+            <Button type="button" as={Col} onClick={doFetchInfo} style={{width:"8rem"}}>
               Fetch
             </Button>
           </Form.Group>

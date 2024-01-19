@@ -27,24 +27,20 @@ import {
   
   const itemList = [
     {
+      text: "Home",
+      to: "/",
+    },
+    {
+      text: "Games",
+      to: "/about",
+    },
+    {
       text: "Signup",
       to: "/signup",
     },
     {
       text: "Login",
       to: "/login",
-    },
-    {
-      text: "Home",
-      to: "/",
-    },
-    {
-      text: "About",
-      to: "/about",
-    },
-    {
-      text: "Contact",
-      to: "/contact",
     },
   ];
   

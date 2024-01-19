@@ -37,13 +37,14 @@ function FindClient()
        }
 
   return (
-    <div>
+    <div style={{backgroundColor:"black",height:"100vh",overflow:"hidden"}}>
+
        <center>
-       <h1 className='mt-3'>Find your next team member.</h1>
+       <h1 className='mt-3' style={{color:"white"}}>Find your next team member.</h1>
        </center>
        <Form method="post">
         <Row className='offset-md-4'>
-       <Form.Group as={Col} md="4" style={{ margin: "40px" }}>
+       <Form.Group as={Col} md="4" style={{ margin: "40px",color:"white" }}>
             <Form.Label>Music Style</Form.Label>
             <select name="musicstyle" required onChange={(e)=>c1= e.target.value}>
               <option value="" disabled selected> Select </option>
@@ -56,13 +57,15 @@ function FindClient()
           </Row>
 
           <Row>
-          {
+            <div style={{display:"flex"}}>
+            {
             jsonAry.map((obj)=>{
                 return(
                     <Card2 key={obj.id} Name={obj.name} Email={obj.email} Mobile={obj.mobile} Experience={obj.exp} MusicStyle={obj.musicstyle} City={obj.city} address={obj.address}></Card2>
                 )
             })
           }
+            </div>
           </Row>
           <Button md="1" as={Col} className='offset-md-5 mt-3' variant="primary" onClick={doSearch}>Search</Button>
        </Form>

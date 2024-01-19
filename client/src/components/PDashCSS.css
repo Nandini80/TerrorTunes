@@ -1,8 +1,10 @@
 .main {
   color: white;
+  height: 100vh;
   background: url(https://c4.wallpaperflare.com/wallpaper/757/235/802/music-background-dark-vinyl-wallpaper-preview.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-y: hidden;
 }
 
 .cards {
@@ -31,18 +33,31 @@
   border-radius: 6%;
 }
 
-.btn {
+
+/* .btn {
   border-radius: 8px;
   border: 0px;
   font-size: medium;
-  padding: 8px;
+  padding: 6px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   opacity: 0.7;
   transition: all 0.2s ease-out;
 }
 
-.btn:hover {
+.btn:hover::before {
+  transform: scale(1.1);
+  color: white;
+  background: black;
+} */
+
+.profile-button {
+  background: transparent;
+  color: white;
+}
+
+.profile-button:hover::before {
   transform: scale(1.1);
   color: white;
   background: black;
 }
+

@@ -3,7 +3,7 @@ import "./LandingPagee/LandingPage.css";
 import { useEffect, useRef } from "react";
 import sound from "../assets/backgroundsound.mp3";
 import GamesCard from "./LandingPagee/GamesCard";
-import Footer from "./LandingPagee/Footer";
+// import Footer from "./LandingPagee/Footer";
 
 function LandingPage() {
   const audioRef = useRef(null);

@@ -33,7 +33,7 @@ function GamesCard() {
               <div className="box box2">
                 <div className="content12">
                   <h2>02</h2>
-                  <h3>Spooky Scrable</h3>
+                  <h3>Spooky Scrabble</h3>
                   <p>Don't Die Early</p>
                   <a href="https://tanyalakhani.github.io/SpookyScrabble/" target="_blank" rel="noopener noreferrer">Play</a>
                 </div>
@@ -55,7 +55,7 @@ function GamesCard() {
               <div className="box box4">
                 <div className="content12">
                   <h2>04</h2>
-                  <h3>Screem Tunes</h3>
+                  <h3>Scream Tunes</h3>
                   <p>Press Carefully</p>
                   <a href="https://lava1008.github.io/Scream-Tunes/" target="_blank" rel="noopener noreferrer">Play</a>
                 </div>

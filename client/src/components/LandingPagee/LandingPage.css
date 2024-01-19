@@ -9,6 +9,7 @@
 
 .wrapper {
   background-color: black;
+  overflow-x: hidden;
 }
 
 .middle-part {
@@ -29,7 +30,8 @@
 }
 
 .text-area p {
-  font-size: medium;
+  margin-top: 1rem;
+  font-size: large;
 }
 
 .cards {
@@ -38,14 +40,14 @@
 }
 
 .gamescards-comp {
-  height: 70rem;
+  height: 60rem;
 }
-
+/* 
 .flex-container {
   display: flex;
   flex-direction: column;
   min-height: 50vh;
   background-color: red;
-}
+} */
 
   

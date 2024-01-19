@@ -97,7 +97,7 @@ function Profile() {
             />
           </Form.Group>
           <Form.Group as={Col} className="mt-5 ms-5">
-            <Button type="button" as={Col} onClick={doFetchInfo}>Fetch</Button>
+            <Button type="button" as={Col} style={{width:"6rem"}} onClick={doFetchInfo}>Fetch</Button>
           </Form.Group>
         </Row>
 
