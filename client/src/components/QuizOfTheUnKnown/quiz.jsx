@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./quiz.css";
 import questions from "./ques.jsx";
-// import pic from './img3.jpg';
+// import pic from './g4.jpg';
 
 
 function Quiz() {
