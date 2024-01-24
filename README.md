@@ -47,4 +47,16 @@ Clone the repository: git clone https://github.com/Nandini80/TerrorTunes
 <br><br>
 Make Your Music Experience Spooky and nice.
 
+# ScreenShots
+
+<img width="940" alt="image" src="https://github.com/Nandini80/TerrorTunes/assets/121488571/e3a15823-9698-4517-98c3-53ca66cb3561">
+
+<img width="615" alt="image" src="https://github.com/Nandini80/TerrorTunes/assets/121488571/24fc1e3f-165b-4bbf-8c68-8d9fcdc9a1c3">
+
+<img width="896" alt="image" src="https://github.com/Nandini80/TerrorTunes/assets/121488571/4f2665d6-3fbb-454e-8809-50f80f1a4b39">
+
+<img width="956" alt="image" src="https://github.com/Nandini80/TerrorTunes/assets/121488571/b1269a60-5c77-45b7-ad8e-370d3072e456">
+
+<img width="940" alt="image" src="https://github.com/Nandini80/TerrorTunes/assets/121488571/070e9292-4dd4-4964-8962-f520e26a2a29">
+<img width="939" alt="image" src="https://github.com/Nandini80/TerrorTunes/assets/121488571/04b285f9-0733-4558-a6b3-eb18b2c294dd">
 
